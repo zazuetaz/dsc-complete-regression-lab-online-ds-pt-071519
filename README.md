@@ -161,17 +161,11 @@ Predict and plot the value of y using regression line above for a new value of $
 
 
 ```python
-# Make prediction using given value and visualize on the scatter plot
-
+# Make prediction for x = 4.5 and visualize on the scatter plot
 ```
 
 
-```python
-
-```
-
-
-![png](index_files/index_6_0.png)
+![png](index_files/index_5_0.png)
 
 
 
@@ -190,7 +184,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_7_0.png)
+![png](index_files/index_6_0.png)
 
 
 ## Level up - Optional 
