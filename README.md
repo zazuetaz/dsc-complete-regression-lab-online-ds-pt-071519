@@ -21,14 +21,13 @@ $\hat m = \dfrac{\overline{x}*\overline{y}-\overline{xy}}{(\overline{x})^2-\over
 **Prediction**: $\hat{y} = \hat mx + \hat c$
 
 **R-Squared**: 
-$ R^2 = 1- \dfrac{SS_{RES}}{SS_{TOT}} = \dfrac{\sum_i(y_i - \hat y_i)^2}{\sum_i(y_i - \overline y_i)^2} $
+$ R^2 = 1- \dfrac{SS_{RES}}{SS_{TOT}} = 1 - \dfrac{\sum_i(y_i - \hat y_i)^2}{\sum_i(y_i - \overline y_i)^2} $
 
 
 Use the python functions created earlier to implement these formulas to run a regression analysis using x and y as input variables. 
 
 
 ```python
-
 # Combine all the functions created so far to run a complete regression experiment. 
 # Produce an output similar to the one shown below. 
 
@@ -36,6 +35,30 @@ X = np.array([1,2,3,4,5,6,7,8,9,10], dtype=np.float64)
 Y = np.array([7,7,8,9,9,10,10,11,11,12], dtype=np.float64)
 
 ```
+
+
+```python
+# Basic Regression Diagnostics
+# ----------------------------
+# Slope: 0.56
+# Y-Intercept: 6.33
+# R-Squared: 0.97
+# ----------------------------
+# Model: Y = 0.56 * X + 6.33
+```
+
+    Basic Regression Diagnostics
+    ----------------------------
+    Slope: 0.56
+    Y-Intercept: 6.33
+    R-Squared: 0.97
+    ----------------------------
+    Model: Y = 0.56 * X + 6.33
+
+
+
+![png](index_files/index_2_1.png)
+
 
 
 ```python
@@ -129,36 +152,27 @@ plot_reg(X,Y,Y_pred)
 
 
 
-![png](index_files/index_2_1.png)
-
-
-
-```python
-# Basic Regression Diagnostics
-# ----------------------------
-# Slope: 0.56
-# Y-Intercept: 6.33
-# R-Squared: 0.97
-# ----------------------------
-# Model: Y = 0.56 * X + 6.33
-```
-
-    Basic Regression Diagnostics
-    ----------------------------
-    Slope: 0.56
-    Y-Intercept: 6.33
-    R-Squared: 0.97
-    ----------------------------
-    Model: Y = 0.56 * X + 6.33
-
-
-
 ![png](index_files/index_3_1.png)
 
 
 ## Make Predictions
 
 Predict and plot the value of y using regression line above for a new value of $x = 4.5$.
+
+
+```python
+# Make prediction using given value and visualize on the scatter plot
+
+```
+
+
+```python
+
+```
+
+
+![png](index_files/index_6_0.png)
+
 
 
 ```python
@@ -172,21 +186,6 @@ plt.plot(X, Y_pred, color='#880000', label='regression line')
 plt.scatter(x_new,y_new,color='r',label='Prediction: '+ str(np.round(y_new,1)))
 plt.legend(loc=4)
 plt.show()
-
-```
-
-
-![png](index_files/index_5_0.png)
-
-
-
-```python
-# Make prediction using given value and visualize on the scatter plot
-
-```
-
-
-```python
 
 ```
 
